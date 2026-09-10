@@ -1265,6 +1265,7 @@ defaults:
           proxy_arp: false
           preferred_group: false
           qos_class: unspecified
+          shutdown: false
           vmware_vmm_domains:
             u_segmentation: false
             delimiter: ""

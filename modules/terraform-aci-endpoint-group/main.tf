@@ -39,6 +39,7 @@ resource "aci_rest_managed" "fvAEPg" {
     fwdCtrl      = var.proxy_arp ? "proxy-arp" : ""
     prefGrMemb   = var.preferred_group == true ? "include" : "exclude"
     prio         = var.qos_class
+    shutdown     = var.shutdown == true ? "yes" : "no"
   }
 
   dynamic "child" {

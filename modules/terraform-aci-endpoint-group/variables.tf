@@ -85,6 +85,12 @@ variable "preferred_group" {
   default     = false
 }
 
+variable "shutdown" {
+  description = "Shutdown."
+  type        = bool
+  default     = false
+}
+
 variable "qos_class" {
   description = "QoS class."
   type        = string

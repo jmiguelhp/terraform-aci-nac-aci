@@ -410,6 +410,7 @@ locals {
           intra_epg_isolation         = try(epg.intra_epg_isolation, local.defaults.apic.tenants.application_profiles.endpoint_groups.intra_epg_isolation)
           proxy_arp                   = try(epg.proxy_arp, local.defaults.apic.tenants.application_profiles.endpoint_groups.proxy_arp)
           preferred_group             = try(epg.preferred_group, local.defaults.apic.tenants.application_profiles.endpoint_groups.preferred_group)
+          shutdown                    = try(epg.shutdown, local.defaults.apic.tenants.application_profiles.endpoint_groups.shutdown)
           qos_class                   = try(epg.qos_class, local.defaults.apic.tenants.application_profiles.endpoint_groups.qos_class)
           custom_qos_policy           = try("${epg.custom_qos_policy}${local.defaults.apic.tenants.policies.custom_qos.name_suffix}", "")
           bridge_domain               = try("${epg.bridge_domain}${local.defaults.apic.tenants.bridge_domains.name_suffix}", "")
@@ -561,6 +562,7 @@ module "aci_endpoint_group" {
   intra_epg_isolation         = each.value.intra_epg_isolation
   proxy_arp                   = each.value.proxy_arp
   preferred_group             = each.value.preferred_group
+  shutdown                    = each.value.shutdown
   qos_class                   = each.value.qos_class
   custom_qos_policy           = each.value.custom_qos_policy
   bridge_domain               = each.value.bridge_domain

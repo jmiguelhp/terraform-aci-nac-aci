@@ -21,6 +21,7 @@ module "aci_endpoint_group" {
   flood_in_encap              = false
   intra_epg_isolation         = true
   preferred_group             = true
+  shutdown                    = false
   qos_class                   = "level1"
   custom_qos_policy           = "CQP1"
   bridge_domain               = "BD1"
@@ -147,6 +148,7 @@ module "aci_endpoint_group" {
 | <a name="input_intra_epg_isolation"></a> [intra\_epg\_isolation](#input\_intra\_epg\_isolation) | Intra EPG isolation. | `bool` | `false` | no |
 | <a name="input_proxy_arp"></a> [proxy\_arp](#input\_proxy\_arp) | Proxy-ARP | `bool` | `false` | no |
 | <a name="input_preferred_group"></a> [preferred\_group](#input\_preferred\_group) | Preferred group membership. | `bool` | `false` | no |
+| <a name="input_shutdown"></a> [shutdown](#input\_shutdown) | Shutdown. | `bool` | `false` | no |
 | <a name="input_qos_class"></a> [qos\_class](#input\_qos\_class) | QoS class. | `string` | `"unspecified"` | no |
 | <a name="input_custom_qos_policy"></a> [custom\_qos\_policy](#input\_custom\_qos\_policy) | Custom QoS policy name. | `string` | `""` | no |
 | <a name="input_bridge_domain"></a> [bridge\_domain](#input\_bridge\_domain) | Bridge domain name. | `string` | n/a | yes |
