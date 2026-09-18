@@ -525,6 +525,8 @@ defaults:
         mismatch_handling: configured
       dhcp_relay_policies:
         name_suffix: ""
+      managed_node_connectivity_groups:
+        name_suffix: ""
       switch_policies:
         vpc_policies:
           name_suffix: ""
